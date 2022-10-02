@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+	<title>Inicio</title>
+	<!--Barra de navegación-->
+	<nav class="navbar">
+		<ul class="main-nav">
+			<li class="button"><a href="inicio.html">Inicio</li>
+			<li class="button lg"><a href="nosotros.html">Quiénes Somos?</li>
+				<li class="button"><a href="Proyectos.html">Nuestros Proyectos</li>
+			<li class="button lg"><a href="actividades.html">Actividades y Donaciones</li>
+			<li class ="button"><a href="contacto.html">Contacto</a></li>
+			<div class="wrapper">
+				<a href="https://www.facebook.com/SOCIEDAD-DE-ESPOSAS-DE-Activida-DE-PANAMA-98717799643" target="_blank" class="icon facebook">
+					<div class="tooltip">Facebook</div>
+					<span><i class="fab fa-facebook-f"></i></span>
+				</a>
+				<a href="https://www.instagram.com/seb.panama/" target="_blank"class="icon instagram">
+					<div class="tooltip">Instagram</div>
+					<span><i class="fab fa-instagram"></i></span>
+				</a>
+			</div>
+		</ul>
+	</nav>
+	<!--Fin Barra de navegación-->
+</head>
+<body>
+<!--Logo-->
+<div class="container">
+	<img class="logo" src="./img/arriba_rojo.png"/>
+</div>
+<!--Logo Fin-->
+<!--Slideshow-->
+<div class="slideshow-container box">
+	<div class="mySlides fade">
+		<img src="img/foto1.jpeg" style="width: 100%;">
+	</div>
+	<div class="mySlides fade"> 
+		
+		<img src="img/foto2.jpeg" style="width: 100%;">
+	</div>
+	<div class="mySlides fade ">
+		
+		<img src="img/foto3.jpeg" style="width: 100%;">
+	</div>
+	<div class="mySlides fade">
+		
+		<img src="img/foto4.jpeg" style="width: 100%;">
+	</div>	
+</div>
+<!-- Javascript-->
+<script type="text/javascript">
+	let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}
+  slides[slideIndex-1].style.display = "block";
+  setTimeout(showSlides, 3500); // Change image every 2 seconds
+}
+</script>		
+<!--Slideshow Fin-->
+<footer class="foot"><img src="img/pegado_rojo.png"></footer>
+</body>
+</html>
