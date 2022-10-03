@@ -29,11 +29,57 @@
 	<!--Barra de navegación-->
 </head>
 <body>
-	<div class="actividades">
-		<ul class="">
-			
-		</ul>
-	</div>
-	<footer class="foot"><img src="img/pegado_rojo.png"></footer>
+<!--Slideshow-->
+<!--Slideshow Fin-->
+<div class="slideshow-container">
+	<div class="slideshow-actividades">
+		<h2>Tombola</h2>
+		<div class="mySlides fade">
+			<img src="img/foto1.jpeg" style="width: 100%;">
+		</div>
+		<div class="mySlides fade"> 
+			<img src="img/foto2.jpeg" style="width: 100%;">
+		</div>
+		<div class="mySlides fade ">
+			<img src="img/foto3.jpeg" style="width: 100%;">
+		</div>
+		<div class="mySlides fade">
+			<img src="img/foto4.jpeg" style="width: 100%;">
+		</div>
+		<h2>Tombola</h2>
+		<div class="mySlides fade">
+			<img src="img/foto1.jpeg" style="width: 100%;">
+		</div>
+		<div class="mySlides fade"> 
+			<img src="img/foto2.jpeg" style="width: 100%;">
+		</div>
+		<div class="mySlides fade ">
+			<img src="img/foto3.jpeg" style="width: 100%;">
+		</div>
+		<div class="mySlides fade">
+			<img src="img/foto4.jpeg" style="width: 100%;">
+		</div>	
+	</div>		
+</div>
+
+
+<!-- Javascript-->
+<script type="text/javascript">
+	let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}
+  slides[slideIndex-1].style.display = "block";
+  setTimeout(showSlides, 3500); // Change image every 2 seconds
+}
+</script>		
+<!-- Javascript Fin-->
 </body>
 </html>
