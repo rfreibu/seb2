@@ -30,36 +30,146 @@
 </head>
 <body>
 <!--Slideshow-->
-
+<h2> Actividades Realizadas</h2>
+<div class="slideshow-container2">
+	<div class="slideshow-actividades">
+		<div class="slideshow-actividades-outer">
+			<div class="slideshow-actividades-inner">
+				<h4>Tómbola de Carro</h4>
+				<div class="slideshow-actividades-img">
+					<div class="fotos fade">
+						<img src="img/tombola/tombola.jpg"/>
+					</div>
+					<div class="fotos fade">
+						<img src="img/tombola/miembros participantes.jpeg"/>
+					</div>
+					<div class="fotos fade">
+						<img src="img/tombola/escogiendo ganador.jpeg"/>
+					</div>
+					<div class="fotos fade">
+						<img src="img/tombola/ganador.jpeg"/>
+					</div>
+					<div class="fotos fade">
+						<img src="img/tombola/premio 2.jpeg"/>
+					</div>
+					<div class="fotos fade">
+						<img src="img/tombola/premio 3.jpeg"/>
+					</div>
+				</div>
+			</div>
+			<!--Separator between slideshows-->
+			<div class="slideshow-actividades-inner">
+				<h4>Torneo de Golf</h4>
+				<div class="slideshow-actividades-img">
+					<div class="fotos-2 fade">
+						<img src="img/torneo de golf/flyer.jpg"/>
+					</div>
+					<div class="fotos-2 fade">
+						<img src="img/torneo de golf/patrocinadores.jpg"/>
+					</div>
+					<div class="fotos-2 fade">
+						<img src="img/torneo de golf/padrinos.jpg"/>
+					</div>
+				</div>
+			</div>
+			<!--Separator between slideshows-->
+			<div class="slideshow-actividades-inner">
+				<h4>Escuela para Padres</h4>
+				<div class="slideshow-actividades-img">
+					<div class="fotos-3 fade">
+						<img src="img/escuela para padres/epp1.jpeg"/>
+					</div>
+					<div class="fotos-3 fade">
+						<img src="img/escuela para padres/epp2.jpeg"/>
+					</div>
+					<div class="fotos-3 fade">
+						<img src="img/escuela para padres/epp3.jpeg"/>
+					</div>
+					<div class="fotos-3 fade">
+						<img src="img/escuela para padres/epp4.jpeg"/>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+  <h6><a href="https://lawebdelasalud.com/abp-apoya-la-leccion-de-amor-que-impulsa-la-escuela-para-padres-de-la-sociedad-de-esposas-de-banqueros/"></a> Donaciones</h6>
 <!--Slideshow Fin-->
-
+<div class="slideshow-container3">
+	<div class="slideshow-donaciones">
+		<div class="slideshow-donaciones-outer">
+			<div class="slideshow-donaciones-inner">
+				<div class="slideshow-donaciones-img">
+					<div class="fotos-4 fade">
+						<img src="img/donaciones/dona1.jpeg"/>
+					</div>
+					<div class="fotos-4 fade">
+						<img src="img/donaciones/dona2.jpeg"/>
+					</div>
+					<div class="fotos-4 fade">
+						<img src="img/donaciones/dona3.jpeg"/>
+					</div>
+					<div class="fotos-4 fade">
+						<img src="img/donaciones/dona4.jpeg"/>
+					</div>
+					<div class="fotos-4 fade">
+						<img src="img/donaciones/dona5.jpeg"/>
+					</div>
+					<div class="fotos-4 fade">
+						<img src="img/donaciones/dona6.jpeg"/>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
 <!-- Javascript-->
 <script type="text/javascript">
 	let slideIndex = 0;
 	let slide2Index = 0;
+	let slide3Index = 0;
+	let slide4Index = 0;
 	showSlides();
 
 	function showSlides() {
 	  let i;
-	  let slides = document.getElementsByClassName("mySlides");
-	  let slides2 = document.getElementsByClassName("mySlides-2");
+	  let slides = document.getElementsByClassName("fotos");
+	  let slides2 = document.getElementsByClassName("fotos-2");
+	  let slides3 = document.getElementsByClassName("fotos-3");
+	  let slides4 = document.getElementsByClassName("fotos-4");
 	  for (i = 0; i < slides.length; i++) {
 		slides[i].style.display = "none";
 	  }
 	  for (i = 0; i < slides2.length; i++) {
 		slides2[i].style.display = "none";
 	  }
+	  for (i = 0; i < slides3.length; i++) {
+		slides3[i].style.display = "none";
+	  }
+	  for (i = 0; i < slides4.length; i++) {
+		slides4[i].style.display = "none";
+	  }
 	  slideIndex++;
 	  slide2Index++;
+	  slide3Index++;
+	  slide4Index++;
 	  if (slideIndex > slides.length) {
 		slideIndex = 1;
 	  }
 	  if (slide2Index > slides2.length) {
 		slide2Index = 1;
 	  }
+	  if (slide3Index > slides3.length) {
+		slide3Index = 1;
+	  }
+	  if (slide4Index > slides4.length) {
+		slide4Index = 1;
+	  }
 	  slides[slideIndex - 1].style.display = "block";
 	  slides2[slide2Index - 1].style.display = "block";
-	  setTimeout(showSlides, 3500); // Change image every 2 seconds
+	  slides3[slide3Index - 1].style.display = "block";
+	  slides4[slide3Index - 1].style.display = "block";
+	  setTimeout(showSlides, 4000); // Change image every 2 seconds
 	}
 </script>		
 <!-- Javascript Fin-->
