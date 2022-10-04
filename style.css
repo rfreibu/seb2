@@ -314,14 +314,14 @@ h6{
 /********************************************************************************/
 /* Inicio de Contacto*/
 .contactform{
-margin: 100px auto;
+margin: 50px auto;
 padding: 0;
 box-sizing: border-box;
 width: 100%;
 height: auto;
 display: flex;
 align-items:center;
-justify-content: left;
+justify-content: center;
 }
 form{
 margin-left: 10px;
@@ -370,11 +370,24 @@ margin: 0 auto;
 }
 .mapa{
 overflow: hidden;
-padding-bottom:30px;
+padding-top: 10px;
 position: relative;
 }
 h5{
 font-size: 30pt;
+}
+@media(max-width:600px) {
+  .contactform{
+    width: 100%;
+  }
+  .mapa{
+    width: 100%;
+  }
+  .contacto{
+    width: 20%;
+    font-size: 18pt;
+  }
+  
 }
 
 /* Fin de Contacto*/
