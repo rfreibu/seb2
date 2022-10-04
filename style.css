@@ -266,12 +266,11 @@ h3{
   justify-content: center;
   align-items: center;
   display: block;
-  width: 512px;
+  width: 100%;
   height: auto;
   padding-right: 20px;
   margin: 0 auto;
 }
-
 .slideshow-donaciones-img {
   display: flex;
   align-items: center;
@@ -280,13 +279,13 @@ h3{
 .fotos{
 display: none;
 }
-.fotos2{
+.fotos-2{
   display: none;
 }
-.fotos3{
+.fotos-3{
   display: none;
 }
-.foto4{
+.fotos-4{
   display: none;
 }
 h4{
