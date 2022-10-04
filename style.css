@@ -128,7 +128,7 @@ a:hover{
 
 /*Logo*/
 .inicio{
-  width: 100vw;
+  width: 100%;
   display: block;
   overflow: hidden;
   box-sizing: border-box;
@@ -387,7 +387,7 @@ font-size: 30pt;
 
 /* Footer Inicio*/
 .footer{
-width: 100vw;
+width: 100%;
 display: block;
 overflow: hidden;
 padding: 50px 0;
@@ -400,7 +400,7 @@ height: auto;
 
 @media(max-width:600px){
 .footer{
-  width: 50%;
+  width: 100%;
 }
 }
 /*Footer Fin*/
