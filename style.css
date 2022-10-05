@@ -232,6 +232,14 @@ h3{
 /********************************************************************************/
 
 /*Inicio de Actividades */
+.slideshow-container2{
+  width:100%
+}
+@media(max-width:600px){
+.slideshow-container2{
+  width: 100%;
+}
+}
 .slideshow-actividades{
   text-align: center;
   display: flex;
