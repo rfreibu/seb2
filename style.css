@@ -7,6 +7,12 @@
   width: 100%;
   height: auto;
 }
+
+@media(max-width:600px){
+  html,body{
+    width: auto;
+  }
+}
 /* Para todo */
 
 /********************************************************************************/
@@ -232,20 +238,14 @@ h3{
 /********************************************************************************/
 
 /*Inicio de Actividades */
-.slideshow-container2{
-  width:100%
-}
-@media(max-width:600px){
-.slideshow-container2{
-  width: 100%;
-}
-}
+
 .slideshow-actividades{
   text-align: center;
   display: flex;
+  justify-content: center;
   align-items: center;
   position: relative;
-  width: 100%; 
+  width: auto; 
   height: auto;
 }
 .slideshow-actividades-inner{
@@ -261,7 +261,7 @@ h3{
 .slideshow-actividades-outer{
   text-align: center;
   display: flex;
-  align-items: center;
+  align-items: left;
   justify-content: center;
 }
 .slideshow-actividades-img {
@@ -276,7 +276,6 @@ h3{
   display: block;
   width: 100%;
   height: auto;
-  padding-right: 20px;
   margin: 0 auto;
 }
 .slideshow-donaciones-img {
@@ -309,7 +308,7 @@ h6{
 .text{
   color: Black;
   font-size: 24px;
-  padding: 8px 12px;
+  padding-top: 8px;
   position: relative;
   bottom: 10px;
   width: 100%;
