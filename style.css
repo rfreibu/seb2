@@ -8,9 +8,9 @@
   height: auto;
 }
 
-@media(max-width:600px){
+@media only screen and (max-width:600px){
   html,body{
-    width: fit-content;
+    width: 100%;
     height: auto;
   }
 }
