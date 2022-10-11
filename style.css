@@ -10,7 +10,8 @@
 
 @media(max-width:600px){
   html,body{
-    width: auto;
+    width: fit-content;
+    height: auto;
   }
 }
 /* Para todo */
