@@ -30,6 +30,70 @@
 	</nav>
 	<!--Fin Barra de navegación-->
 </head>
-<body style="background-image:url(img/construccion.png);">
+<body>
+	<h2>Galería de Multimedia</h2>
+	<div class="galeria">
+		<div class="img_galeria">
+			<div class="tmp">
+			<video width="420px" height="540px" controls><source src="img/Galeria/testimonio Marie'Poussepin.mp4" type="video/mp4"></video>
+			<div class="descripcion" style="font-weight:bold;"> Testimonio Escuelita Marie-Poussepin.</div>
+			</div>
+			<!---->
+			<div class="EC">
+				<div class="gal">
+					<img src="img/Galeria/EC1.jpeg"/>
+				</div>
+				<div class="gal">
+					<img src="img/Galeria/EC2.jpeg"/>
+				</div>
+				<div class="gal">
+					<img src="img/Galeria/EC3.jpeg"/>
+				</div>
+				<div class="gal">
+					<img src="img/Galeria/EC4.jpeg"/>
+				</div>
+				<div class="gal">
+					<img src="img/Galeria/EC5.jpeg"/>
+				</div>
+				<div class="gal">
+					<img src="img/Galeria/EC6.jpeg"/>
+				</div>
+				<div class="gal">
+					<img src="img/Galeria/EC7.jpeg"/>
+				</div>
+				<div class="gal">
+					<img src="img/Galeria/EC8.jpeg"/>
+				</div>
+				<div class="gal">
+					<img src="img/Galeria/EC9.jpeg"/>
+				</div>
+				<div class="descripcion" style="font-weight:bold;"> Escuela Para Padres 2022 - Colegio Eneida de Castillero</div>
+			</div>
+			<!---->
+			<div class="TG">
+				<video width="420px" height="540px" controls><source src="img/Galeria/testimonio Marie'Poussepin.mp4" type="video/mp4"></video>
+				<div class="descripcion" style="font-weight:bold;"> Torneo de Golf 2023</div>
+				</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		let slideIndex = 0;
+		
+		showSlides();
+	
+		function showSlides() {
+		  let i;
+		  let slides = document.getElementsByClassName("gal");
+		  for (i = 0; i < slides.length; i++) {
+			slides[i].style.display = "none";
+		  }
+		  slideIndex++;
+		  if (slideIndex > slides.length) {
+			slideIndex = 1;
+		  }
+		  slides[slideIndex - 1].style.display = "block";
+		  setTimeout(showSlides, 4000); // Change image every 2 seconds
+		}
+	</script>		
 </body>
 </html>
