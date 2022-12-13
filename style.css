@@ -311,6 +311,7 @@ h6{
   margin: 0 10s;
   background-color:#C5C2E0;
   justify-content: space-evenly;
+  flex-wrap: wrap;
 }
 
 
