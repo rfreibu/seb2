@@ -1,0 +1,91 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f6f6f6;  /* Light background for contrast */
+    font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: 2.5em;  /* Enhanced size for main heading */
+    text-align: center;
+    margin: 40px 0;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;  /* Adjusted margin for better spacing */
+}
+
+.year-btn {
+    background-color: #e9e4e4;
+    padding: 15px 20px;  /* Increased padding for better appearance */
+    color: #333333;
+    border: none;
+    border-radius: 8px;  /* Slightly increased border-radius */
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    margin: 0 15px;
+}
+
+.year-btn:hover {
+    background-color: #dfbfbf;
+    transform: translateY(-5px);  /* Enhanced hover effect */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+}
+
+.tombola22_ss,.tombola23_ss {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));  /* Adjusted for better responsiveness */
+    gap: 40px;  /* Adjusted gap for better spacing */
+    padding: 40px;  
+    margin: 0 auto;
+    max-width: 1200px;  /* Set max width for larger screens */
+}
+
+.tombola22_ss img, .tombola23_ss img {
+    transition: transform 0.3s, box-shadow 0.3s;  /* Added transition for smoother effect */
+    width: 100%;  /* Adjusted for better responsiveness */
+    height: auto;
+}
+
+.tombola22_ss img:hover ,.tombola23_ss img:hover {
+    transform: scale(1.05);  /* Enhanced scale effect on hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.tombola22_ss .descripcion,.tombola23_ss .descripcion {
+    color: #333;  /* Adjusted for consistency */
+    font-size: 1.2em;
+    text-align: center;
+    font-weight: bold;
+    margin: 20px 0;  /* Added margin for spacing */
+}
+
+.year-images img {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Additional CSS for transitions */
+.year-images {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;  /* Added smooth transition for opacity */
+    display: none;  /* By default, all image galleries are hidden */
+}
+
+.year-images.active {
+    opacity: 1;
+    display: block;  /* Display block when the class 'active' is added */
+}
+
+/* Ensure the footer is always visible */
+footer {
+    display: block !important;
+    opacity: 1 !important;
+}

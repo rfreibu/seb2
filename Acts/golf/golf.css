@@ -1,0 +1,94 @@
+
+body{
+    margin: 0;
+    padding: 0;
+    line-height: 1.6; 
+}
+.golf_btns{
+    display:flex ;
+    justify-content:center;
+}
+.golf_yr_btn{
+    background-color: #e9e4e4;
+    padding: 10px 15px;
+    color: #333333; 
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    box-shadow: none;
+    margin: 15px;
+}
+.golf_yr_btn:hover{
+    background-color: #dfbfbf;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.year_images{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 100px;
+    padding: 20px;  
+    margin: 0 auto;
+}
+.year_images img:hover{
+    transform: scale(1.01);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+.img-modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.7); /* Black w/ opacity */
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 1000;
+    cursor: pointer;
+}
+
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 90%;
+    max-height: 90%;
+}
+
+.modal img {
+    width: 100%;
+    height: auto;
+}
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 50%;
+    padding: 5px;
+    line-height: 30px;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+}
+
+.close-button:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
