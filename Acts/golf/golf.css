@@ -26,7 +26,7 @@ body{
 }
 
 .year_images{
-    display: grid;
+    display: none;
     grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
     gap: 100px;
     padding: 20px;  

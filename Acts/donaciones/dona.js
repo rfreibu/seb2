@@ -1,31 +1,20 @@
-
 document.addEventListener('DOMContentLoaded', function() {
-    // Get all images and the modal element
+    // Handle image modal
     let images = document.querySelectorAll('.donaciones-images img');
     let modal = document.createElement('div');
     modal.className = 'modal';
-
-    // Create the modal content container
     let modalContent = document.createElement('div');
     modalContent.className = 'modal-content';
     modal.appendChild(modalContent);
-
-    // Create the close button and add it to the modal
     let closeButton = document.createElement('span');
     closeButton.innerHTML = "&times;";
     closeButton.className = "close-button";
     modal.appendChild(closeButton);
-
-    // Close the modal when the close button is clicked
     closeButton.addEventListener('click', function(event) {
         modal.style.display = 'none';
         event.stopPropagation();
     });
-
-    // Add the modal to the body
     document.body.appendChild(modal);
-
-    // Add event listener to each image
     images.forEach(img => {
         img.addEventListener('click', function() {
             let modalImage = new Image();
@@ -35,9 +24,21 @@ document.addEventListener('DOMContentLoaded', function() {
             modal.style.display = 'block';
         });
     });
-
-    // Close the modal when clicked anywhere
     modal.addEventListener('click', function() {
         modal.style.display = 'none';
+    });
+
+    // Handle section toggle
+    const headers = document.querySelectorAll('.toggle-header');
+    headers.forEach(header => {
+        header.addEventListener('click', function() {
+            const year = this.getAttribute('data-year');
+            const content = document.getElementById(`section-${year}`);
+            if (content.style.display === "none" || !content.style.display) {
+                content.style.display = "block";
+            } else {
+                content.style.display = "none";
+            }
+        });
     });
 });

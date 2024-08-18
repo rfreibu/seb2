@@ -32,9 +32,16 @@ var videoIndex = 1;
 showVideo(videoIndex);
 
 function moveVideo(n) {
+    stopAllVideos(); // Stop all videos before moving to the next one
     showVideo(videoIndex += n);
 }
-
+function stopAllVideos() {
+    var videos = document.querySelectorAll(".slideshow_vids video");
+    videos.forEach(function(video) {
+        video.pause();
+        video.currentTime = 0; // Reset video to the start
+    });
+}
 function showVideo(n) {
     var i;
     var videos = document.getElementsByClassName("slideshow_vids");
