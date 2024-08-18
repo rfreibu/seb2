@@ -7,19 +7,16 @@
     font-family: 'Roboto', sans-serif;
     transition: all 0.3s ease-in-out;
 }
-
-body {
+body{
     line-height: 1.5;
-    background-color: #f5f5f5;
-    color: #333;
-}
 
+}
 .layout {
     display: flex;
-    margin: 4% auto;
+    margin: 4% auto; 
     justify-content: space-evenly;
     flex-direction: row;
-    max-width: 1200px;
+
 }
 
 .about {
@@ -41,26 +38,19 @@ h1, h2, h3 {
 
 h1 {
     font-size: 2.2em;
-    color: #0056b3;
 }
 
 h2, h3 {
     font-size: 1.8em;
-    color: #333;
 }
-
 .about_epp p {
     font-size: 1.1em;
     margin-bottom: 20px;
-    color: #555;
 }
 
-.slideshow_epp img, .slideshow_videos video {
+.slideshow_epp img {
     width: 512px;
     height: 512px;
-    border-radius: 10px;
-    object-fit: cover;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
 }
 
 .centros,
@@ -75,7 +65,8 @@ h2, h3 {
 }
 
 .centros ul,
-.column ul {
+.column1 ul,
+.column2 ul {
     list-style-type: none;
     display: flex;
     flex-wrap: wrap;
@@ -83,7 +74,8 @@ h2, h3 {
 }
 
 .centros ul li,
-.column ul li {
+.column1 ul li,
+.column2 ul li {
     padding: 15px;
     width: 100%;
     background-color: #f8f9fa;
@@ -92,15 +84,17 @@ h2, h3 {
     cursor: pointer;
     font-size: 1.1em;
     margin-bottom: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .8);
     text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
 }
 
 .centros ul li:hover,
-.column ul li:hover {
+.column1 ul li:hover,
+.column2 ul li:hover {
     background-color: #e9ecef;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-    transform: scale(1.05);
 }
 
 .enfoque_cols {
@@ -110,7 +104,8 @@ h2, h3 {
     gap: 2%;
 }
 
-.column {
+.column1,
+.column2 {
     width: 48%;
 }
 
@@ -121,14 +116,13 @@ h2, h3 {
     margin: 40px auto;
     overflow: hidden;
     position: relative;
-    max-width: 100%;
+    max-width: 100%; 
 }
 
 .slideshow_epp {
     display: none;
 }
-
-.slideshows {
+.slideshows{
     display: flex;
     flex-direction: column;
 }
@@ -144,9 +138,11 @@ h2, h3 {
     padding: 16px;
     color: white;
     font-weight: bold;
+    font-size: 18px;
     transition: 0.6s ease;
-    border-radius: 50%;
+    border-radius: 10%;
     user-select: none;
+    background-color: rgba(0, 0, 0, 0.5);
     transform: translateY(-50%);
 }
 
@@ -180,15 +176,10 @@ h2, h3 {
 .active,
 .dot:hover {
     background-color: #333;
+    /* Darker shade for active/hover state */
 }
-
-.footer {
-    padding: 20px;
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-}
-
-.footer .foot {
-    height: 50px;
+.slideshow_videos{
+    width: 512px;
+    height: 512px;
+    
 }
