@@ -1,4 +1,4 @@
-var slideIndex= 1;
+var slideIndex = 1;
 showSlide(slideIndex);
 
 function moveSlide(n) {
@@ -28,6 +28,7 @@ function showSlide(n) {
 var slideInterval = setInterval(function(){
     moveSlide(1);
 }, 5000); // Change image every 5 seconds
+
 var videoIndex = 1;
 showVideo(videoIndex);
 
