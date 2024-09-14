@@ -9,6 +9,9 @@
 }
 .logo_inicio{
     width: 100%;
+    max-width: 505px;
+    height: auto;
+    margin: auto;
 }
 .slideshow1 {
     display: none;

@@ -1,17 +1,31 @@
 .slideshow-container {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: center; /* This centers everything inside the container */
     margin: 20px auto;
     overflow: hidden;
     width: fit-content;
     position: relative;
 }
-.logo_inicio{
-    width: 100%;
+
+.logo_inicio {
+    width: 450px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center; /* Ensure child (image) is centered horizontally */
 }
-.slideshow1 {
-    display: none;
+
+.logo_inicio img {
+    max-width: 100%;
+    height: auto;
+    display: block; /* Ensures the image is treated as a block element */
+}
+
+.slideshow img {
+    width: 100%;
+    max-width: 900px; /* You can adjust this based on the original image size */
+    height: auto;
+    max-height: 700px;
 }
 
 .prev,
@@ -65,24 +79,18 @@
     background-color: #333;
 }
 
-.slideshow img {
-    width: 100%;
-    max-width: 900px; /* You can adjust this based on the original image size */
-    height: auto;
-    max-height: 700px;
-}
-
 /* Adjust the width of the slideshow container for smaller screens */
 @media (max-width: 1000px) {
     .slideshow-container {
         width: 100%;
     }
-    
+
     .prev, .next {
         font-size: 16px;
         padding: 12px;
     }
-    img{
+
+    img {
         width: 100%;
     }
 }
@@ -92,13 +100,14 @@
         font-size: 14px;
         padding: 10px;
     }
-    
+
     .dot {
         height: 10px;
         width: 10px;
         margin: 3px;
     }
-    img{
+
+    img {
         width: 100%;
     }
 }
