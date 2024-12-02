@@ -9,8 +9,7 @@ body {
     font-size: 16px;
 }
 
-h1,
-h2 {
+h1, h2 {
     font-family: 'Lato', sans-serif;
 }
 
@@ -66,31 +65,29 @@ h1 {
     background-color: #F9F9F9;
     border-radius: 6px;
     font-size: 1rem;
-    line-height: 1.8;
-    margin-bottom: 5px; 
+    line-height: 1.9;
+    margin-bottom: 5px;
     border-left: 4px solid #E74C3C;
-    padding-left: 10px; 
-    
+    padding-left: 10px;
 }
-.members, video, .info {
-    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);  /* Smooth transition */
-}
+
 .mision_vision {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: start;
     width: 100%;
-    
+    margin-top: 20px;
 }
 
 .mision_vision p {
-    line-height: 1.8;  
-    border-left: 4px solid #FFF; 
-    padding-left: 10px;  
-    margin-bottom: 20px; text-align: justify;
-    
+    line-height: 1.9;
+    border-left: 4px solid #FFF;
+    padding-left: 10px;
+    margin-bottom: 20px;
+    text-align: justify;
 }
+
 .block {
     flex-basis: calc(33% - 20px);
     margin: 10px;
@@ -99,19 +96,31 @@ h1 {
     background-color: #fff;
     border-radius: 8px;
     transition: transform 0.4s ease, box-shadow 0.4s ease;
-    min-height: 320px; padding: 10px;
-    
-}   
-.block p{
+    min-height: 320px;
+}
+
+.block p {
     text-align: justify;
     margin: 10px;
 }
+
 .block:hover {
     transform: translateY(-10px) scale(1.02);
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
 }
 
+.section_title {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    color: #E74C3C;
+}
 
+.mision_vision_section {
+    margin-top: 40px;
+    padding: 20px;
+}
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
@@ -119,6 +128,15 @@ h1 {
         flex-direction: column;
         gap: 20px;
         padding: 20px;
+    }
+
+    .mision_vision {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .block {
+        flex-basis: 100%;
     }
 
     .info {
