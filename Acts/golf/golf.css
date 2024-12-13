@@ -4,6 +4,9 @@ body{
     padding: 0;
     line-height: 1.6; 
 }
+h1{
+    color: #c187d1;
+}
 .golf_btns{
     display:flex ;
     justify-content:center;

@@ -1,55 +1,74 @@
-var slideIndex = 1;
-showSlide(slideIndex);
-
-function moveSlide(n) {
-    showSlide(slideIndex += n);
-}
-
-function currentSlide(n) {
-    showSlide(slideIndex = n);
-}
-
-function showSlide(n) {
-    var i;
-    var slides = document.getElementsByClassName("slideshow_epp");
-    var dots = document.getElementsByClassName("dot");
-    if (n > slides.length) {slideIndex = 1}
-    if (n < 1) {slideIndex = slides.length}
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
+function showContent(n, contents, dots = null) {
+    var index = n > contents.length ? 1 : n < 1 ? contents.length : n;
+    contents.forEach((content, i) => {
+        content.style.display = i + 1 === index ? "block" : "none";
+    });
+    if (dots) {
+        dots.forEach(dot => dot.classList.remove("active"));
+        dots[index - 1].classList.add("active");
     }
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace("active", "");
-    }
-    slides[slideIndex-1].style.display = "block";
-    dots[slideIndex-1].className += " active";
+    return index;
 }
+let currentPage = 1;
+const totalPages = 5;
 
-var slideInterval = setInterval(function(){
-    moveSlide(1);
-}, 5000); // Change image every 5 seconds
-
-var videoIndex = 1;
-showVideo(videoIndex);
-
-function moveVideo(n) {
-    stopAllVideos(); // Stop all videos before moving to the next one
-    showVideo(videoIndex += n);
-}
-function stopAllVideos() {
-    var videos = document.querySelectorAll(".slideshow_vids video");
-    videos.forEach(function(video) {
-        video.pause();
-        video.currentTime = 0; // Reset video to the start
+function showPage(page) {
+    const allPages = document.querySelectorAll('.gallery-page');
+    allPages.forEach((p, index) => {
+        p.style.display = (index + 1 === page) ? 'grid' : 'none';
     });
 }
-function showVideo(n) {
-    var i;
-    var videos = document.getElementsByClassName("slideshow_vids");
-    if (n > videos.length) {videoIndex = 1}
-    if (n < 1) {videoIndex = videos.length}
-    for (i = 0; i < videos.length; i++) {
-        videos[i].style.display = "none";
+
+function nextPage() {
+    if (currentPage < totalPages) {
+        currentPage++;
+        showPage(currentPage);
     }
-    videos[videoIndex-1].style.display = "block";
 }
+
+function previousPage() {
+    if (currentPage > 1) {
+        currentPage--;
+        showPage(currentPage);
+    }
+}
+
+document.addEventListener('DOMContentLoaded', () => showPage(currentPage));
+
+// Select all gallery items
+const galleryItems = document.querySelectorAll('.gallery-item img');
+const modal = document.createElement('div');
+modal.classList.add('modal');
+document.body.appendChild(modal);
+
+// Create modal content
+modal.innerHTML = `
+  <div class="modal-content">
+    <button class="modal-close">&times;</button>
+    <img src="" alt="Full-size image">
+  </div>
+`;
+
+// Select modal elements
+const modalContent = modal.querySelector('.modal-content img');
+const modalClose = modal.querySelector('.modal-close');
+
+// Open modal on image click
+galleryItems.forEach(item => {
+  item.addEventListener('click', (e) => {
+    modal.style.display = 'flex';
+    modalContent.src = e.target.src; // Set the clicked image source to the modal image
+  });
+});
+
+// Close modal on close button click
+modalClose.addEventListener('click', () => {
+  modal.style.display = 'none';
+});
+
+// Close modal when clicking outside the content
+modal.addEventListener('click', (e) => {
+  if (e.target === modal) {
+    modal.style.display = 'none';
+  }
+});

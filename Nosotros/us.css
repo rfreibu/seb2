@@ -18,7 +18,7 @@ h1 {
     line-height: 1.5;
     text-align: center;
     margin: 60px 0 50px 0;
-    color: #E74C3C;
+    color: #e1a0f3;
 }
 
 .about {
@@ -57,7 +57,7 @@ h1 {
     flex-direction: column;
     gap: 20px;
     padding: 20px;
-    border-left: 2px solid #E74C3C;
+    border-left: 2px solid #c187d1;
 }
 
 .info p {
@@ -67,7 +67,7 @@ h1 {
     font-size: 1rem;
     line-height: 1.9;
     margin-bottom: 5px;
-    border-left: 4px solid #E74C3C;
+    border-left: 4px solid #c187d1;
     padding-left: 10px;
 }
 

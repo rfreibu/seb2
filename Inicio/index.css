@@ -10,7 +10,7 @@
 
 .logo_inicio {
     width: 450px;
-    margin: 0 auto;
+    margin: 2% auto;
     display: flex;
     justify-content: center; /* Ensure child (image) is centered horizontally */
 }
