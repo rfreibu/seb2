@@ -1,133 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Escuela Para Padres - Modern Design</title>
-    <link rel="stylesheet" href="epp.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Escuela Para Padres - Modern Design</title>
+  <link rel="stylesheet" href="epp.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
-    <script src="/Navegacion/nav.js"></script>
-    <div id="navbar-container"></div>
+  <script src="/Navegacion/nav.js" defer></script>
+  <div id="navbar-container"></div>
 
-    <header>
-        <h1>Escuela Para Padres</h1>
-    </header>
+  <header>
+    <h1>Escuela Para Padres</h1>
+  </header>
 
-    <main>
-        <section>
-            <div class="section-header">
-                <h2>Sobre Nosotras</h2>
-            </div>
-            <p>En nuestra Escuela Para Padres, más de 700 familias se han beneficiado de un espacio seguro para aprender, dialogar, practicar estrategias y realizar actividades para fortalecer a sus familias desde una crianza respetuosa.</p>
-        </section>
+  <main>
+    <section>
+      <div class="section-header">
+        <h2>Sobre Nosotras</h2>
+      </div>
+      <p>En nuestra Escuela Para Padres, más de 700 familias se han beneficiado de un espacio seguro para aprender, dialogar, practicar estrategias y realizar actividades para fortalecer a sus familias desde una crianza respetuosa.</p>
+      <div class="gallery-item">
+        <video controls>
+          <source src="videos/programaescuelaparapadres.mp4" type="video/mp4">
+        </video>
+        <p class="caption">Escuela Para Padres 2024</p>
+      </div>
+    </section>
 
-        <section>
-            <div class="section-header">
-                <h2>Centros Participantes</h2>
-            </div>
-            <ul>
-                <li>Centro Educativo Marie-Poussepin - Curundú</li>
-                <li>Centro Educativo Pedro Nolazco - Búrunga, Arraiján</li>
-                <li>Escuela Gabriel Lewis Galindo - San Miguelito</li>
-                <li>Hogar de Nuestra Señora del Buen Pastor - Boca la Caja</li>
-                <li>Escuela Eneida Moreno de Castillero - Chitré</li>
-                <li>Centro Juvenil y Biblioteca Las Mañanitas</li>
-                <li>Centro Juntos Podemos - Curundú</li>
-            </ul>
-        </section>
+    <section>
+      <div class="section-header">
+        <h2>Centros Participantes</h2>
+      </div>
+      <ul>
+        <li>Centro Educativo Marie-Poussepin - Curundú</li>
+        <li>Centro Educativo Pedro Nolazco - Búrunga, Arraiján</li>
+        <li>Escuela Gabriel Lewis Galindo - San Miguelito</li>
+        <li>Hogar de Nuestra Señora del Buen Pastor - Boca la Caja</li>
+        <li>Escuela Eneida Moreno de Castillero - Chitré</li>
+        <li>Centro Juvenil y Biblioteca Las Mañanitas</li>
+        <li>Centro Juntos Podemos - Curundú</li>
+      </ul>
+    </section>
 
-        <section>
-            <div class="section-header">
-                <h2>Temas de Enfoque</h2>
-            </div>
-            <div class="grid grid-cols-2">
-                <ul>
-                    <li>Juego de la Crianza</li>
-                    <li>Cuerpo y Movimiento en la Salud</li>
-                    <li>Autoridad en la Familia</li>
-                    <li>Enseñando a Nuestros Hijos a ser Líderes Conscientes</li>
-                    <li>Disciplina Positiva</li>
-                    <li>Autoestima y Autoconcepto</li>
-                </ul>
-                <ul>
-                    <li>Comunicación Asertiva</li>
-                    <li>Prevención del Abuso Infantil</li>
-                    <li>Inteligencia Emocional</li>
-                    <li>Educación en Afectividad y Sexualidad</li>
-                    <li>Valor de la Familia</li>
-                    <li>Gestión de Ansiedad - Pánico - Estrés y su Manejo Hoy.</li>
-                </ul>
-            </div>
-        </section>
+    <section>
+      <div class="section-header">
+        <h2>Temas de Enfoque</h2>
+      </div>
+      <div class="grid grid-cols-2">
+        <ul>
+          <li>Juego de la Crianza</li>
+          <li>Cuerpo y Movimiento en la Salud</li>
+          <li>Autoridad en la Familia</li>
+          <li>Enseñando a Nuestros Hijos a ser Líderes Conscientes</li>
+          <li>Disciplina Positiva</li>
+          <li>Autoestima y Autoconcepto</li>
+        </ul>
+        <ul>
+          <li>Comunicación Asertiva</li>
+          <li>Prevención del Abuso Infantil</li>
+          <li>Inteligencia Emocional</li>
+          <li>Educación en Afectividad y Sexualidad</li>
+          <li>Valor de la Familia</li>
+          <li>Gestión de Ansiedad - Pánico - Estrés y su Manejo Hoy.</li>
+        </ul>
+      </div>
+    </section>
 
-        <section>
-            <div class="section-header">
-                <h2>Galería de Imágenes</h2>
-            </div>
-            <div class="gallery-navigation">
-                <button onclick="previousPage()">&#8592; Anterior</button>
-                <button onclick="nextPage()">Siguiente &#8594;</button>
-            </div>
-            <div class="gallery">
-                <div class="gallery-page" style="display: none;">
-                    <div class="gallery-item"><img src="/Proyectos/EPP/images/epp1.jpeg" alt="Imagen 1"></div>
-                    <div class="gallery-item"><img src="/Proyectos/EPP/images/epp2.jpeg" alt="Imagen 2"></div>
-                    <div class="gallery-item"><img src="/Proyectos/EPP/images/epp3.jpeg" alt="Imagen 3"></div>
-                    <div class="gallery-item"><img src="/Proyectos/EPP/images/epp4.jpeg" alt="Imagen 4"></div>
-                    <div class="gallery-item"><img src="/Proyectos/EPP/images/epp5.jpg" alt="Imagen 5"></div>
-                    <div class="gallery-item"><img src="/Proyectos/EPP/images/epp6.jpg" alt="Imagen 6"></div>
-                    <div class="gallery-item"><img src="/Proyectos/EPP/images/epp7.jpg" alt="Imagen 7"></div>
-                    <div class="gallery-item"><img src="/Proyectos/EPP/images/epp8.jpg" alt="Imagen 8"></div>
-                </div>
-                <div class="gallery-page" style="display: none;">
-                    <div class="gallery-item"><img src="/Proyectos/EPP/images/epp9.jpg" alt="Imagen 9"></div>
-                    <div class="gallery-item"><img src="/Proyectos/EPP/images/epp10.png" alt="Imagen 10"></div>
-                    <div class="gallery-item"><img src="/Proyectos/EPP/images/epp11.jpeg" alt="Imagen 11"></div>
-                    <div class="gallery-item"><img src="/Proyectos/EPP/images/epp12.jpeg" alt="Imagen 12"></div>
-                    <div class="gallery-item"><img src="/Proyectos/EPP/images/epp14.jpg" alt="Imagen 13"></div>
-                    <div class="gallery-item"><img src="/Proyectos/EPP/images/epp16.jpg" alt="Imagen 16"></div>
-                    <div class="gallery-item"><img src="/Proyectos/EPP/images/epp17.jpg" alt="Imagen 17"></div>
-                    <div class="gallery-item"><img src="/Proyectos/EPP/images/epp18.jpg" alt="Imagen 18"></div>
-                </div>
-                <div class="gallery-page" style="display: none;">
-                    <div class="gallery-item"><img src="/Proyectos/EPP/images/epp19.jpg" alt="Imagen 19"></div>
-                    <div class="gallery-item"><img src="/Proyectos/EPP/images/epp20.jpg" alt="Imagen 20"></div>
-                </div>
-                <!-- <div class="gallery-page" style="display: none;"> -->
-                </div>
-                <div class="gallery-page" style="display: none;">
-                    <div class="gallery-item"><img src="/Proyectos/EPP/images/epp21.jpg" alt="Imagen 21"></div>
-                    <div class="gallery-item"><img src="/Proyectos/EPP/images/epp22.jpg" alt="Imagen 22"></div>
-                    <div class="gallery-item"><img src="/Proyectos/EPP/images/epp23.jpg" alt="Imagen 23"></div>
-                    <div class="gallery-item"><img src="/Proyectos/EPP/images/epp24.jpg" alt="Imagen 24"></div>
-                    <div class="gallery-item"><img src="/Proyectos/EPP/images/epp25.jpg" alt="Imagen 25"></div>
-                </div>
-            </div>
-        </section>
+    <section>
+      <div class="section-header">
+        <h2>Galería de Imágenes</h2>
+      </div>
+      <div class="gallery-navigation">
+        <button id="prevButton">&#8592; Anterior</button>
+        <button id="nextButton">Siguiente &#8594;</button>
+      </div>
+      <div class="gallery">
+        <div class="gallery-page">
+          <div class="gallery-item"><img src="images/epp1.jpeg" alt="Imagen 1"></div>
+          <div class="gallery-item"><img src="images/epp2.jpeg" alt="Imagen 2"></div>
+          <div class="gallery-item"><img src="images/epp3.jpeg" alt="Imagen 3"></div>
+          <div class="gallery-item"><img src="images/epp4.jpeg" alt="Imagen 4"></div>
+          <div class="gallery-item"><img src="images/epp5.jpg" alt="Imagen 5"></div>
+          <div class="gallery-item"><img src="images/epp6.jpg" alt="Imagen 6"></div>
+          <div class="gallery-item"><img src="images/epp7.jpg" alt="Imagen 7"></div>
+          <div class="gallery-item"><img src="images/epp8.jpg" alt="Imagen 8"></div>
+        </div>
+        <div class="gallery-page">
+          <div class="gallery-item"><img src="images/epp9.jpg" alt="Imagen 9"></div>
+          <div class="gallery-item"><img src="images/epp10.png" alt="Imagen 10"></div>
+          <div class="gallery-item"><img src="images/epp11.jpeg" alt="Imagen 11"></div>
+          <div class="gallery-item"><img src="images/epp12.jpeg" alt="Imagen 12"></div>
+          <div class="gallery-item"><img src="images/epp14.jpg" alt="Imagen 13"></div>
+          <div class="gallery-item"><img src="images/epp16.jpg" alt="Imagen 16"></div>
+          <div class="gallery-item"><img src="images/epp17.jpg" alt="Imagen 17"></div>
+          <div class="gallery-item"><img src="images/epp18.jpg" alt="Imagen 18"></div>
+        </div>
+        <div class="gallery-page">
+          <div class="gallery-item"><img src="images/epp19.jpg" alt="Imagen 19"></div>
+          <div class="gallery-item"><img src="images/epp20.jpg" alt="Imagen 20"></div>
+        </div>
+        <div class="gallery-page">
+          <div class="gallery-item"><img src="images/epp21.jpg" alt="Imagen 21"></div>
+          <div class="gallery-item"><img src="images/epp22.jpg" alt="Imagen 22"></div>
+          <div class="gallery-item"><img src="images/epp23.jpg" alt="Imagen 23"></div>
+          <div class="gallery-item"><img src="images/epp24.jpg" alt="Imagen 24"></div>
+          <div class="gallery-item"><img src="images/epp25.jpg" alt="Imagen 25"></div>
+        </div>
+      </div>
+    </section>
 
-        <section>
-                <div class="section-header">
-                    <h2>Galería de Videos</h2>
-                </div>
-                <div class="grid grid-cols-2 gallery">
-                    <div class="gallery-item"><video controls><source src="/Proyectos/EPP/videos/taller.mp4" type="video/mp4"></video><p class="caption">Taller</p></div>
-                    <div class="gallery-item"><video controls><source src="/Proyectos/EPP/videos/TESTIMONIO CON AMOR 2023 (5 ).mp4" type="video/mp4"></video><p class="caption">Testimonio 1</p></div>
-                    <div class="gallery-item"><video controls><source src="/Proyectos/EPP/videos/Testimonio final CEMP 2023 ( 4 ).mp4" type="video/mp4"></video><p class="caption">Testimonio Final</p></div>
-                    <div class="gallery-item"><video controls><source src="/Proyectos/EPP/videos/testimonio Marie'Poussepin.mp4" type="video/mp4"></video><p class="caption">Testimonio Marie Poussepin</p></div>
-                    <div class="gallery-item"><video controls><source src="/Proyectos/EPP/videos/testimonioepp.mp4" type="video/mp4"></video><p class="caption">Video 5</p></div>
-                    <div class="gallery-item"><video controls><source src="/Proyectos/EPP/videos/video de testimonios.mp4" type="video/mp4"></video><p class="caption">Video 6</p></div>
-                </div>
-            </section>
-        </main>
-    </body>
-    <script>
-        loadNavbar();
-    </script>
-        <script src="epp.js"></script>
-
-    </html>
-    
+    <section>
+      <div class="section-header">
+        <h2>Galería de Videos</h2>
+      </div>
+      <div class="grid grid-cols-2 gallery">
+        <div class="gallery-item">
+          <video controls>
+            <source src="videos/taller.mp4" type="video/mp4">
+          </video>
+          <p class="caption">Taller</p>
+        </div>
+        <div class="gallery-item">
+          <video controls>
+            <source src="videos/TESTIMONIO CON AMOR 2023 (5 ).mp4" type="video/mp4">
+          </video>
+          <p class="caption">Testimonio 1</p>
+        </div>
+        <div class="gallery-item">
+          <video controls>
+            <source src="videos/Testimonio final CEMP 2023 ( 4 ).mp4" type="video/mp4">
+          </video>
+          <p class="caption">Testimonio Final</p>
+        </div>
+        <div class="gallery-item">
+          <video controls>
+            <source src="videos/testimonio Marie'Poussepin.mp4" type="video/mp4">
+          </video>
+          <p class="caption">Testimonio Marie Poussepin</p>
+        </div>
+        <div class="gallery-item">
+          <video controls>
+            <source src="videos/testimonioepp.mp4" type="video/mp4">
+          </video>
+          <p class="caption">Video 5</p>
+        </div>
+        <div class="gallery-item">
+          <video controls>
+            <source src="videos/video de testimonios.mp4" type="video/mp4">
+          </video>
+          <p class="caption">Video 6</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="epp.js" defer></script>
+</body>
+</html>
