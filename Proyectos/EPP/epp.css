@@ -92,6 +92,59 @@
     padding: 8px 0;
   }
   
+  /* Improved "Temas de Enfoque" Lists */
+  .temas-list {
+    background-color: var(--bg-color);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  }
+  
+  .temas-list li {
+    margin: 10px 0;
+    padding-left: 25px;
+    position: relative;
+    line-height: 1.5;
+    font-size: 1rem;
+  }
+  
+  .temas-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--primary-color);
+    font-size: 1rem;
+  }
+  
+  /* Centros Participantes List Styling */
+  .centros-list {
+    background-color: var(--bg-color);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    margin-top: 20px;
+  }
+  
+  .centros-list li {
+    margin: 10px 0;
+    padding-left: 30px;
+    position: relative;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  
+  .centros-list li::before {
+    content: "🏫";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--primary-color);
+    font-size: 1rem;
+  }
+  
   /* Gallery */
   .gallery {
     margin: 20px auto;
