@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/Inicio/index.css">
+    <script src="/Navegacion/nav.js"></script>
+    <title>SEB - Panamá</title>
+</head>
+
+<body>
+    <div id="navbar-container"></div>
+    <div class="inicio">
+        <div class="logo_inicio">
+            <img src="/Imagenes/logos/arriba_rojo.png" alt="logo">
+        </div>
+        <div class="slideshow-container">
+            <!-- Removed the div with foto1.jpeg -->
+            <div class="slideshow fade"> <img src="/Inicio/foto10.jpeg" alt="foto10"></div>
+            <div class="slideshow fade"> <img src="/Inicio/foto5.jpg" alt="foto5"></div>
+            <div class="slideshow fade"> <img src="/Inicio/foto6.jpg" alt="foto6"></div>
+            <div class="slideshow fade"> <img src="/Inicio/foto7.jpg" alt="foto7"></div>
+            <div class="slideshow fade"> <img src="/Inicio/foto8.jpg" alt="foto8"></div>
+            <div class="slideshow fade"> <img src="/Inicio/foto9.jpg" alt="foto9"></div>
+            <div class="slideshow fade"> <img src="/Inicio/foto2.jpeg" alt="foto2"></div>
+            <div class="slideshow fade"> <img src="/Inicio/foto3.jpeg" alt="foto3"></div>
+            <div class="slideshow fade"> <img src="/Inicio/foto4.jpeg" alt="foto4"></div>
+
+            <a class="prev" onclick="moveSlide(-1)">&#10094;</a>
+            <a class="next" onclick="moveSlide(1)">&#10095;</a>
+            <div class="dot-container">
+                <!-- Updated dot number to reflect the number of slides -->
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+                <span class="dot" onclick="currentSlide(5)"></span>
+                <span class="dot" onclick="currentSlide(6)"></span>
+                <span class="dot" onclick="currentSlide(7)"></span>
+                <span class="dot" onclick="currentSlide(8)"></span>
+                <span class="dot" onclick="currentSlide(10)"></span>
+
+            </div>
+        </div>
+    </div>
+    <script src="/Inicio/index.js"></script>
+    <script>loadNavbar();</script>
+
+</body>
+
+</html>
