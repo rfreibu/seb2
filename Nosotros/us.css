@@ -89,7 +89,7 @@ h1 {
 }
 
 .block {
-    flex-basis: calc(33% - 20px);
+    flex-basis: 100%;
     margin: 10px;
     padding: 20px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
@@ -100,7 +100,7 @@ h1 {
 }
 
 .block p {
-    text-align: justify;
+    text-align: center;
     margin: 10px;
 }
 
@@ -108,7 +108,26 @@ h1 {
     transform: translateY(-10px) scale(1.02);
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
 }
+.codigo-etico {
+    flex-basis: 100%;
+    margin: 10px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    border-radius: 8px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    min-height: 320px;
+}
 
+.codigo-etico p {
+    text-align: center;
+    margin: 10px;
+}
+
+.codigo-etico:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+}
 .section_title {
     font-size: 2.5rem;
     text-align: center;
@@ -120,6 +139,21 @@ h1 {
 .mision_vision_section {
     margin-top: 40px;
     padding: 20px;
+}
+/* Descargar PDF button */
+.btn-download {
+  display: inline-block;
+  margin-top: 1em;
+  padding: 0.75em 1.5em;
+  background-color: #c187d1;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+.btn-download:hover {
+  background-color: #a063aa;
 }
 
 /* Responsive adjustments */
