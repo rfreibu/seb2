@@ -1,57 +1,117 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/main.css">
-    <link rel="stylesheet" href="/Contact/contact.css">
-    <script src="/Navegacion/nav.js"></script>
-    <title>SEB - Panamá</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>SEB Panamá — Contacto</title>
+  <meta name="description" content="Ponte en contacto con la Sociedad de Esposas de Banqueros (SEB) de Panamá. Encuentra teléfonos, dirección, correo y un formulario de contacto." />
+  <link rel="canonical" href="https://sebpanama.org/contacto/" />
+
+  <!-- Estilos del sitio -->
+  <link rel="stylesheet" href="/css/main.css" />
+  <link rel="stylesheet" href="/Contact/contact.css" />
+
+  <!-- Favicons -->
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+  <!-- Social -->
+  <meta property="og:title" content="SEB Panamá — Contacto" />
+  <meta property="og:description" content="Contáctanos: formulario, teléfono, dirección y correo de SEB Panamá." />
+  <meta property="og:url" content="https://sebpanama.org/contacto/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://sebpanama.org/imagenes/og-default.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Navbar -->
+  <script src="/Navegacion/nav.js" defer></script>
 </head>
 
 <body>
-    <div id="navbar-container"></div>
-    <div class="contact_page">
-        <div class="contact_form">
-            <h1>Ponte en Contacto con Nosotras:</h1>
-            <form action="https://formsubmit.co/sebpanamaredes@gmail.com" method="POST">
-                <input type="text" name="_honey" style="display:none">
-                <input type="hidden" name="_captcha" value="false">
-                <input type="hidden" name="_next" value="https://rfreibu.github.io/seb2/Thanks.html">
-                <label for="name">Nombre y Apellido:</label>
-                <input type="text" id="name" name="name" required>
-                <label for="email">Correo:</label>
-                <input type="email" id="email" name="email" required>
-                <label for="phone">Número de Teléfono :</label>
-                <input type="phone" id="phone" name="phone" required>
-                <label for="message">Mensaje:</label>
-                <textarea id="message" name="message" rows="4" required></textarea>
-                <button type="submit">Enviar</button>
-            </form>
-        </div>
-        <div class="contact_info">
-            <h2>Nuestra Información</h2>
-                <p>Número de Teléfono: <a href="tel:+5073944086">+507 394-4086</a></p>
-                <p>Dirección: Calle 50, Torre Global Bank, Piso 11, Oficina #1101</p>
-        </div>
-        <div class="map">
-            <h3>Ubicación </h3>
-            <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3940.871605159222!2d-79.51885778476438!3d8.983960592165324!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8faca8e2b78981e3%3A0xad1f8efe3facf70a!2sGlobal%20Bank!5e0!3m2!1sen!2spa!4v1664311558150!5m2!1sen!2spa"
-            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-        </div>
-        </div>
-    </div>
-    </div>
-    <footer class="footer">
-        <div class="container">
-            <div class="logo2">
-                <img class="foot" src="/Imagenes/logos/pegado_rojo.png" alt="foot">
-            </div>
-        </div>
-    </footer>
-    <script>loadNavbar();</script>
-</body>
+  <!-- Navbar dinámico -->
+  <div id="navbar-container" role="navigation" aria-label="Principal"></div>
 
+  <!-- Contenido -->
+  <main class="wrap" id="main-content">
+    <header class="page-header">
+      <h1 class="page-title">Contacto</h1>
+      <p class="muted page-subtitle">Escríbenos o visítanos — estaremos encantadas de ayudarte.</p>
+    </header>
+
+    <section class="grid" aria-label="Sección de contacto">
+      <!-- Columna izquierda: Formulario -->
+      <div class="card">
+        <h2 class="section-title">Ponte en contacto con nosotras</h2>
+        <form class="stack" action="https://formsubmit.co/sebpanamaredes@gmail.com" method="POST" aria-label="Formulario de contacto">
+          <!-- Honeypot & config -->
+          <input type="text" name="_honey" style="display:none" aria-hidden="true">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_next" value="https://rfreibu.github.io/seb2/Thanks.html">
+
+          <label for="name">Nombre y Apellido</label>
+          <input id="name" name="name" type="text" placeholder="Tu nombre completo" required autocomplete="name" />
+
+          <label for="email">Correo</label>
+          <input id="email" name="email" type="email" placeholder="tucorreo@dominio.com" required autocomplete="email" />
+
+          <label for="phone">Número de Teléfono</label>
+          <input id="phone" name="phone" type="tel" inputmode="tel" placeholder="+507 000 0000"
+                 pattern="^[+0-9()\\-\\s]{6,}$" title="Usa dígitos y símbolos como +, -, ()" required />
+
+          <label for="message">Mensaje</label>
+          <textarea id="message" name="message" rows="5" placeholder="¿En qué podemos ayudarte?" required></textarea>
+
+          <button type="submit" class="btn">Enviar</button>
+        </form>
+      </div>
+
+      <!-- Columna derecha: Info + Mapa -->
+      <aside class="stack" aria-label="Información y ubicación">
+        <div class="card">
+          <h2 class="section-title">Nuestra información</h2>
+          <ul class="contact-list">
+            <li><strong>Teléfono:</strong> <a href="tel:+5073944086">+507 394-4086</a></li>
+            <li><strong>Correo:</strong> <a href="mailto:info@sebpanama.org">info@sebpanama.org</a></li>
+            <li><strong>Dirección:</strong> Calle 50, Torre Global Bank, Piso 11, Oficina #1101</li>
+          </ul>
+        </div>
+
+        <div class="card map">
+          <h2 class="section-title">Ubicación</h2>
+          <iframe
+            title="Mapa: Torre Global Bank"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3940.871605159222!2d-79.51885778476438!3d8.983960592165324!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8faca8e2b78981e3%3A0xad1f8efe3facf70a!2sGlobal%20Bank!5e0!3m2!1ses!2spa!4v1664311558150!5m2!1ses!2spa"
+            loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+        </div>
+      </aside>
+    </section>
+  </main>
+
+  <!-- Footer con imagen -->
+  <footer class="site-footer with-image" role="contentinfo" aria-label="Pie de página">
+    <div class="footer-image" role="img" aria-label="SEB Panamá">
+      <!-- Si es un banner ancho, deja la clase "is-banner".
+           Si es un logo cuadrado, usa class="is-logo" para centrarlo sin recortes. -->
+      <img class="is-banner" src="/Imagenes/logos/logo-nuevo.png" alt="SEB Panamá" />
+      <!-- Si mantienes el nombre con espacio:
+      <img class="is-banner" src="/Imagenes/logos/logo%20nuevo.png" alt="SEB Panamá" />
+      -->
+    </div>
+
+    <!-- Overlay sobre la imagen -->
+    <div class="wrap footer-overlay">
+      <div class="footer-left">
+        <img src="/Imagenes/logos/logo-nuevo.png" alt="SEB Panamá" class="footer-logo" />
+        <span class="footer-org">Sociedad de Esposas de Banqueros de Panamá</span>
+      </div>
+      <ul class="footer-links">
+        <li><a href="/enlaces/enlaces.html">Enlaces de Interés</a></li>
+        <li><a href="/Contact/contact.html">Contacto</a></li>
+        <li><a href="mailto:info@sebpanama.org">info@sebpanama.org</a></li>
+      </ul>
+    </div>
+  </footer>
+</body>
 </html>

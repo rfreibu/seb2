@@ -1,5 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Lato:wght@400;700&display=swap');
+:root{
+  --seb-text:#111315;
+  --seb-muted:#6b7280;
+  --seb-bg:#ffffff;
+  --seb-surface:#ffffff;
+  --seb-stroke:#e6e7eb;
+  --seb-brand:#d10a2a;
+  --seb-brand-700:#a40820;
+  --seb-shadow:0 6px 18px rgba(0,0,0,.06);
+  --seb-radius-lg:16px;
+  --seb-radius:12px;
+  --seb-radius-sm:10px;
+  --seb-ring:rgba(209,10,42,.18);
 
+  /* Footer image */
+  --footer-img-height: 200px;
+}
 body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
@@ -69,4 +85,86 @@ h1, h2, h3 {
     }
 }
 
-    
+/* ====== FOOTER CON IMAGEN ====== */
+.site-footer{
+  flex-shrink:0;
+  position:relative;
+  border-top:1px solid var(--seb-stroke);
+  padding:0;
+  background: transparent;
+}
+
+/* Alto del bloque de imagen (ajusta según tu banner) */
+:root { --footer-img-height: 200px; }
+
+.site-footer .footer-image{
+  width:100%;
+  height:var(--footer-img-height);
+  position:relative;
+  overflow:hidden;                 /* recorta lo que sobresalga */
+  background: #fff;                /* color de fondo por si la imagen tiene transparencia */
+}
+
+/* Imagen como banner cubriendo todo el ancho */
+.site-footer .footer-image img{
+  width:100%;
+  height:100%;
+  display:block;
+  object-fit:cover;                /* recorta para cubrir */
+  object-position:center;
+}
+
+/* Si usas un LOGO y NO quieres que se recorte, usa la clase .is-logo */
+.site-footer .footer-image img.is-logo{
+  object-fit:contain;              /* muestra completo sin recortar */
+  background:#fff;                 /* banda blanca detrás del logo */
+  padding:8px 0;                   /* algo de aire arriba/abajo */
+}
+
+/* Overlay con contenido por encima de la imagen */
+.footer-overlay{
+  position:relative;
+  margin-top:-60px;                 /* superpone el recuadro sobre la imagen */
+  padding:16px 24px;
+  border-top-left-radius: var(--seb-radius-lg);
+  border-top-right-radius: var(--seb-radius-lg);
+  background: rgba(255,255,255,0.9);      /* si usas dark mode, cambia a rgba(17,17,17,.75) */
+  backdrop-filter: blur(6px);
+  display:flex; align-items:center; justify-content:space-between; gap:16px;
+  box-shadow: 0 -1px 0 rgba(0,0,0,0.04);
+}
+
+/* Contenido del overlay */
+.footer-left{ display:flex; align-items:center; gap:10px; }
+.footer-logo{ height:36px; width:auto; display:block; }
+.footer-org{ font-size:.95rem; color:var(--seb-muted); }
+
+.footer-links{
+  display:flex; align-items:center; gap:14px;
+  list-style:none; margin:0; padding:0;
+}
+.footer-links a{
+  color:var(--seb-text); text-decoration:none; font-weight:600;
+  border-bottom:1px solid transparent;
+  transition:color .2s ease, border-color .2s ease, box-shadow .2s ease;
+}
+.footer-links a:hover{
+  color:var(--seb-brand);
+  border-color:var(--seb-brand);
+  box-shadow:0 2px 0 var(--seb-brand);
+}
+
+/* ====== Responsive ====== */
+@media (max-width: 900px){
+  .footer-overlay{ margin-top:-40px; }
+}
+@media (max-width: 720px){
+  .page-title{ font-size:1.7rem; }
+  .footer-overlay{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:10px;
+    margin-top:-30px;
+  }
+  .footer-links{ flex-wrap:wrap; gap:10px 14px; }
+}

@@ -1,93 +1,197 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Lato:wght@400;700&display=swap');
-
-body {
-    font-family: 'Roboto', sans-serif;
-    line-height: 1.6;
-    color: #333;
-    margin: 0;
-    padding: 0;
+/* ====== Tokens SEB (fallback si no están en /css/main.css) ====== */
+:root{
+  --seb-text:#111315;
+  --seb-muted:#6b7280;
+  --seb-bg:#ffffff;
+  --seb-surface:#ffffff;
+  --seb-stroke:#e6e7eb;
+  --seb-brand:#d10a2a;
+  --seb-brand-700:#a40820;
+  --seb-shadow:0 6px 18px rgba(0,0,0,.06);
+  --seb-radius-lg:16px;
+  --seb-radius:12px;
+  --seb-radius-sm:10px;
+  --seb-ring:rgba(209,10,42,.18);
 }
 
-.contact_page {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: center;
+/* ====== Estructura de página (sticky footer) ====== */
+html, body { height: 100%; }
+body{
+  display:flex; flex-direction:column; min-height:100dvh;
+  margin:0; color:var(--seb-text); background:var(--seb-bg);
+  font-family: Inter, system-ui, Roboto, Segoe UI, Arial, sans-serif;
+  -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+}
+.wrap{ max-width:1100px; margin:0 auto; padding:24px; }
+main.wrap{ flex:1 0 auto; }
+
+/* ====== Encabezado ====== */
+.page-header{ margin-bottom:10px; }
+.page-title{ margin:8px 0 4px; font-size:2rem; font-weight:700; }
+.page-subtitle{ margin:0; }
+.muted{ color:var(--seb-muted); }
+
+/* ====== Layout principal ====== */
+.grid{
+  display:grid; gap:18px; grid-template-columns:1fr;
+  justify-content:center; /* centra el track cuando hay una sola columna */
+}
+@media (min-width: 760px){
+  .grid{ grid-template-columns:2fr 1fr; justify-content:initial; }
 }
 
-h1,
-h2,
-h3 {
-    margin-bottom: 15px;
-    font-weight: 700;
-    color: #2c3e50;
-    font-family: 'Lato', sans-serif;
-    letter-spacing: 1px;
-    text-align: center;
+/* Tarjetas */
+.card{
+  background:var(--seb-surface);
+  border:1px solid var(--seb-stroke);
+  border-radius:var(--seb-radius-lg);
+  box-shadow:var(--seb-shadow);
+  padding:18px;
+}
+.section-title{ margin:0 0 10px; font-size:1.2rem; }
+
+/* Utilidades */
+.stack{ display:grid; gap:10px; }
+
+/* ====== Formulario ====== */
+label{ font-size:.95rem; color:var(--seb-muted); }
+input, textarea{
+  width:100%; padding:12px;
+  border-radius:var(--seb-radius-sm);
+  border:1px solid var(--seb-stroke);
+  background:#fff; color:var(--seb-text);
+  transition:border .2s ease, box-shadow .2s ease, background .2s ease;
+}
+input::placeholder, textarea::placeholder{ color:#8a8f98; }
+input:focus, textarea:focus{
+  border-color:var(--seb-brand);
+  box-shadow:0 0 0 4px var(--seb-ring);
+  outline:none;
 }
 
-.contact_form,
-.contact_info,
-.map {
-    flex: 1;
-    margin: 15px;
-    padding: 20px;
-    border-radius: 8px;
-    background: #ffffff;
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+/* Botón principal */
+.btn, .contact_form form button{
+  padding:10px 14px;
+  border-radius:var(--seb-radius-sm);
+  background:var(--seb-brand);
+  border:1px solid var(--seb-brand-700);
+  color:#fff; font-weight:600; cursor:pointer;
+  transition:transform .08s ease, background .2s ease, box-shadow .2s ease;
+  text-decoration:none; display:inline-block; width:max-content;
+}
+.btn:hover, .contact_form form button:hover{
+  background:var(--seb-brand-700);
+  box-shadow:0 0 0 6px var(--seb-ring);
+}
+.btn:active, .contact_form form button:active{ transform:translateY(1px); }
+.btn:focus-visible{ outline:none; box-shadow:0 0 0 4px var(--seb-ring); }
+
+/* ====== Información y mapa ====== */
+.contact-list{
+  list-style:none; margin:0; padding:0; display:grid; gap:6px;
+}
+.contact-list a{ color:var(--seb-brand); text-decoration:underline; }
+
+.map iframe{
+  width:100%; height:320px; border:0; border-radius:var(--seb-radius);
 }
 
-.contact_form form {
-    display: flex;
-    flex-direction: column;
+/* ====== FOOTER CON IMAGEN ====== */
+.site-footer{
+  flex-shrink:0;
+  position:relative;
+  border-top:1px solid var(--seb-stroke);
+  padding:0;
+  background: transparent;
 }
 
-.contact_form form input[type="text"],
-.contact_form form input[type="email"],
-.contact_form form input[type="phone"],
-.contact_form form textarea {
-    padding: 12px;
-    border-radius: 5px;
-    border: 1px solid #ddd;
-    margin-bottom: 20px;
-    transition: border 0.3s ease-in-out;
+/* Alto del bloque de imagen (ajusta según tu banner) */
+:root { --footer-img-height: 200px; }
+
+.site-footer .footer-image{
+  width:100%;
+  height:var(--footer-img-height);
+  position:relative;
+  overflow:hidden;                 /* recorta lo que sobresalga */
+  background: #fff;                /* color de fondo por si la imagen tiene transparencia */
 }
 
-
-.contact_form form input:focus,
-.contact_form form textarea:focus {
-    border: 1px solid #3498db;
+/* Imagen como banner cubriendo todo el ancho */
+.site-footer .footer-image img{
+  width:100%;
+  height:100%;
+  display:block;
+  object-fit:cover;                /* recorta para cubrir */
+  object-position:center;
 }
 
-.contact_form form button {
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    background-color: #3498db;
-    color: #fff;
-    cursor: pointer;
-    transition: background-color 0.3s ease-in-out;
+/* Si usas un LOGO y NO quieres que se recorte, usa la clase .is-logo */
+.site-footer .footer-image img.is-logo{
+  object-fit:contain;              /* muestra completo sin recortar */
+  background:#fff;                 /* banda blanca detrás del logo */
+  padding:8px 0;                   /* algo de aire arriba/abajo */
 }
 
-.contact_form form button:hover {
-    background-color: #2980b9;
+/* Overlay con contenido por encima de la imagen */
+.footer-overlay{
+  position:relative;
+  margin-top:-60px;                 /* superpone el recuadro sobre la imagen */
+  padding:16px 24px;
+  border-top-left-radius: var(--seb-radius-lg);
+  border-top-right-radius: var(--seb-radius-lg);
+  background: rgba(255,255,255,0.9);      /* si usas dark mode, cambia a rgba(17,17,17,.75) */
+  backdrop-filter: blur(6px);
+  display:flex; align-items:center; justify-content:space-between; gap:16px;
+  box-shadow: 0 -1px 0 rgba(0,0,0,0.04);
 }
 
-.contact-info h2,
-.map h2 {
-    color: #333;
+/* Contenido del overlay */
+.footer-left{ display:flex; align-items:center; gap:10px; }
+.footer-logo{ height:36px; width:auto; display:block; }
+.footer-org{ font-size:.95rem; color:var(--seb-muted); }
+
+.footer-links{
+  display:flex; align-items:center; gap:14px;
+  list-style:none; margin:0; padding:0;
+}
+.footer-links a{
+  color:var(--seb-text); text-decoration:none; font-weight:600;
+  border-bottom:1px solid transparent;
+  transition:color .2s ease, border-color .2s ease, box-shadow .2s ease;
+}
+.footer-links a:hover{
+  color:var(--seb-brand);
+  border-color:var(--seb-brand);
+  box-shadow:0 2px 0 var(--seb-brand);
 }
 
-.contact-info p,
-.map p {
-    line-height: 1.6;
-    color: #666;
+/* ====== Responsive ====== */
+@media (max-width: 900px){
+  .footer-overlay{ margin-top:-40px; }
+}
+@media (max-width: 720px){
+  .page-title{ font-size:1.7rem; }
+  .footer-overlay{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:10px;
+    margin-top:-30px;
+  }
+  .footer-links{ flex-wrap:wrap; gap:10px 14px; }
 }
 
-.map iframe {
-    width: 100%;
-    border-radius: 8px;
+/* ====== (Opcional) Tema oscuro ======
+:root{
+  --seb-text:#ffffff;
+  --seb-muted:#a6a8ad;
+  --seb-bg:#0f0f12;
+  --seb-surface:#17171c;
+  --seb-stroke:#282a30;
 }
+.footer-overlay{
+  background: rgba(17,17,17,.75);
+  color: var(--seb-text);
+}
+.footer-links a{ color: var(--seb-text); }
+===================================== */
+    

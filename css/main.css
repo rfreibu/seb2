@@ -34,3 +34,34 @@ footer {
     width: 50%;
   }
 }
+
+/* === SEB design tokens (compartidos) === */
+:root{
+  --seb-text:#111315;
+  --seb-muted:#6b7280;
+  --seb-bg:#ffffff;
+  --seb-surface:#ffffff;
+  --seb-stroke:#e6e7eb;
+  --seb-brand:#d10a2a;
+  --seb-brand-700:#a40820;
+  --seb-shadow:0 6px 18px rgba(0,0,0,.06);
+  --seb-radius-lg:16px;
+  --seb-radius:12px;
+  --seb-radius-sm:10px;
+  --seb-ring:rgba(209,10,42,.18);
+}
+
+/* helpers compartidos */
+.wrap{max-width:1100px;margin:0 auto;padding:24px}
+.card{
+  background:var(--seb-surface);
+  border:1px solid var(--seb-stroke);
+  border-radius:var(--seb-radius-lg);
+  box-shadow:var(--seb-shadow);
+  padding:18px;
+}
+.muted{color:var(--seb-muted)}
+.tag{
+  font-size:.78rem;padding:4px 8px;border:1px solid var(--seb-stroke);
+  border-radius:999px;color:var(--seb-muted);background:#fff
+}
